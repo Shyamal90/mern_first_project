@@ -23,7 +23,7 @@ form>input{
     margin-top:12px;
     margin-bottom:12px;
 }
-button{
+#createBtn{
     width:100%;
     height:35px;
     margin-top:10px;
@@ -32,6 +32,9 @@ button{
     color:white;
     font-weight:bold;
     cursor: pointer;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
 #ldiv{
     font-size:12px;

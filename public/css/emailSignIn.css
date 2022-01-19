@@ -23,7 +23,7 @@ form>input{
     margin-top:12px;
     margin-bottom:12px;
 }
-#button1{
+#signInBtn{
     width:100%;
     height:35px;
     background-color:rgb(249,99,2);
@@ -31,6 +31,9 @@ form>input{
     color:white;
     font-weight:bold;
     cursor: pointer;
+    border-top: none;
+    border-right: none;
+    border-left: none;
 }
 #button2{
     width:100%;
