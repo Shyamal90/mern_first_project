@@ -1,11 +1,11 @@
 const app = require("./app");
 const connect = require("./configs/db");
+const PORT = 3333;
 
-
-app.listen(4000,async()=>{
+app.listen(PORT,async()=>{
     try {
         await connect();
-        console.log("Connection Successful with port 4000");
+        // console.log(`Connection with port ${PORT}`);
     } catch (error) {
         console.log(error);
     }

@@ -17,7 +17,7 @@ router.post("",async(req,res)=>{
         })
 
         const registerData = await registerUser.save();
-        res.status(201).render("index");
+        res.status(201).render("email_login");
         
     } catch (error) {
         console.log(error);

@@ -25,19 +25,19 @@
                 <p id="back" style="color:rgb(118,188,235);cursor: pointer"><i class="fas fa-chevron-left"> </i> Back</p>
 
 
-                <p style="font-size:14px;font-weight: 450;">First, enter your email address.</p>
+                <p style="font-size:14px;font-weight: 450;"> Enter your email address and Password</p>
                 <label>Email Address</label>
                 <br>
-                <input type="text" id="email">
+                <input type="text" id="email" name="email">
                 <p class="info" id="iemail"></p>
 
                 <label>Password</label>
                 <br>
-                <input type="password" id="password">
+                <input type="password" id="password" name="password">
 
                 <input type="submit" value="Sign In" id="signInBtn">
             </form>
-            {{!-- <button id="button1">Continue</button> --}}
+            
             <p id="linep">Don't Have an Account?</p>
             <a href="/register"><button id="button2">Create An Account</button></a>
         </div>
@@ -55,46 +55,51 @@
 </body>
 </html>
 <script>
-    document.querySelector("#button1").addEventListener("click", login);
+//     document.querySelector("#button1").addEventListener("click", login);
 
-    document.querySelector("#button2").addEventListener("click",register);
+//     document.querySelector("#button2").addEventListener("click",register);
 
-    document.querySelector("#back").addEventListener("click",backto);
+//     document.querySelector("#back").addEventListener("click",backto);
 
 
-function login(){
+// function login(){
 
-    let email=document.querySelector("#email").value;
+//     let email=document.querySelector("#email").value;
     
 
-    let data=JSON.parse(localStorage.getItem("rdata"));  
+//     let data=JSON.parse(localStorage.getItem("rdata"));  
 
-    console.log(data);
-    console.log(data.email);
-    console.log(email)
+//     console.log(data);
+//     console.log(data.email);
+//     console.log(email)
 
-    if(data.email==email){
-        console.log(1);
-        window.location.href="passwordSignIn.html"
-    }
+//     if(data.email==email){
+//         console.log(1);
+//         window.location.href="passwordSignIn.html"
+//     }
 
 
-    // getProfile();
+//     // getProfile();
 
-}
+// }
 
-function register(){
+// function register(){
 
-window.location.href="register.html";
+// window.location.href="register.html";
 
-}
+// }
 
-function backto(){
+// function backto(){
     
-window.location.href="register.html";
+// window.location.href="register.html";
+// }
+
+document.querySelector("#signInBtn").addEventListener("click",getData);
+
+function getData(){
+    let email = document.querySelector("#email").value;
+    localStorage.setItem("UserEmail",JSON.stringify(email));
 }
-
-
 
 
 </script>

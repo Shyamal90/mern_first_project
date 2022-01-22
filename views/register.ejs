@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/64d8096832.js" crossorigin="anonymous"></script>
+    <title>The Home Depot: sign in, create account</title>
+    <link rel = "icon" href ="https://assets.homedepot-static.com/single-signin-ui/0.557.0/build/7b4c51f66559b768081eabf61db98f2d.svg" type = "image/x-icon">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<style>
+    
+</style>
+<body>
+    <div id="mdiv">
+        <div>
+            <a href="/index"><img style="cursor: pointer;" src="https://assets.homedepot-static.com/single-signin-ui/0.557.0/build/7b4c51f66559b768081eabf61db98f2d.svg"/></a>
+            <p style="font-size:23px;line-height:2px;font-weight:bold">Create an Account</p>
+        </div>
+        <div id="fdiv">
+
+
+            <form action="/register" method="post">
+                <p style="color:rgb(118,188,235);cursor: pointer"><i class="fas fa-chevron-left"> </i> Back</p>
+
+
+                <label>Email Address</label>
+                <br>
+                <input type="text" id="email" name="email">
+                <p class="info" id="iemail"></p>
+
+
+                <label>Password</label>
+                <br>
+                <input type="password" id="password" name="password">
+                <p class="info" id="ipass"></p>
+
+
+                <div id="phelp"></div>
+
+                <label>Zip Code</label>
+                <br>
+                <input type="number" id="zip" name="zip_code">
+                <p class="info" id="izip"></p>
+
+
+                <label>Phone</label>
+                <br>
+                <input type="number" id="phone" name="phone">
+                <p id="imob" class="info"></p>
+
+                <input type="submit" value="Create an Account" id="createBtn">
+
+            </form>
+
+
+            <div style="cursor: pointer">
+                <input type="checkbox" id="cbx1" name="cbx1" style="cursor: pointer">
+                <label for="cbx1" style="cursor: pointer">Keep me Signed in</label>
+                
+            </div>
+
+            <div style="cursor: pointer">
+                
+                <input type="checkbox" id="cbx2" name="cbx2" style="cursor: pointer" >
+                <label for="cbx2" style="cursor: pointer">Verify my mobile number via text message or phone call</label><br>
+                
+            </div>
+            
+        </div>
+        <div id="ldiv">
+            <p>Already Have an Account? <a href="/email_login"> Sign In</a></p>
+            <p>By selecting 'Create an Account' you are agreeing to the Pro Xtra Terms and Conditions, Privacy and Security Statement, & My Account Terms and Conditions.</p>
+        </div>
+
+
+    </div>
+</body>
+</html>

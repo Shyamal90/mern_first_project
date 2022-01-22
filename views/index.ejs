@@ -123,9 +123,10 @@
                         
                     </div>
                 </div>
+                
                 <div class="profileSection">
                     <ul>
-                        <li id="myAccount"><a href="#"> <span id="myProfile">My Account</span>  <img src="./image/person.svg" alt="logo"> </a>
+                        <li id="myAccount"><a href="#"> <span id="myProfile" >My Account</span>  <img src="./image/person.svg" alt="logo"> </a>
                             <div class="registerform">
                                 <div class="registrationBtn">
                                     <a href="/email_login" ><button id="signinBtn">Sign in</button></a>
@@ -214,6 +215,8 @@
         <div class="middleSection">
 
         </div>
+
+
 
         <!-- Offer Section -->
         <!-- <div class="offerSection">
@@ -426,8 +429,10 @@
 
         <!-- Footer Section -->
         <div class="footerSection"></div>
-    </div>
+        
 
+    </div>
+    <!-- <button></button> -->
 </body>
 </html>
 
@@ -450,19 +455,27 @@
 
 </script>
 
+
 <script>
-    // Update cart items value
-    let cartItems = JSON.parse(localStorage.getItem("cartData"));
-    // let totalItems = cartItems.length;
-    console.log(cartItems);
+   let email = JSON.parse(localStorage.getItem('UserEmail'));
+   
 
-    if(cartItems.length > 0){
-        document.querySelector("#totalItems").innerHTML=cartItems.length;
-    }else{
-        document.querySelector("#totalItems").innerHTML=0;
-    }
-    
+   
+//    if(email){
+//        document.querySelector("#registrationBtn").style.display = 'none';
+//    }
+//    console.log(email);
+   document.querySelector("#myProfile").innerHTML = email;
 
+
+//    document.querySelector(".registrationBtn").style.display = "none";
+
+   document.querySelector(".registrationBtn").innerHTML = `<button id="logOutBtn">Log out</button>`;
+
+   document.querySelector("#logOutBtn").addEventListener("click",()=>{
+         console.log("click");
+   })
 </script>
 
 <script src="./Script/profileUpdate.js"></script>
+
